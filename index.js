@@ -7,14 +7,14 @@ function RandomButton () {
 
 class Color extends React.Component {
   state = {
-    color: 'blue',
-    hex: '#FF00FF'
+    color: '#FF00FF'
   }
 
   render() {
     return(
-      <div className="w-100 d-flex" style={{height: "100vh"}}>
-        <button style={{height: "10vh"}}>LOCK</button>
+      <div  style={{ backgroundColor: this.state.color}} className="w-100 d-flex flex-column align-items-center justify-content-center">
+        <h1>#FF00FF</h1>
+        <button className="btn btn-dark">LOCK</button>
       </div>
     )
   }
@@ -22,15 +22,14 @@ class Color extends React.Component {
 
 const App = function() {
   return (
-    <div>
+    <div style={{marginTop: "50px", 
+    height: "100vh"}} className="w-100 d-flex">
       <RandomButton />
-      <div className="d-flex flex-row">
       <Color />
       <Color />
       <Color />
       <Color />
       <Color />
-      </div>
     </div>)
 }
 
